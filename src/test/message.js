@@ -48,6 +48,21 @@ describe('Message API endpoints', () => {
 
     it('should load all messages', (done) => {
         // TODO: Complete this
+        // Matches get all messages in routes/message.js 
+        chai.request(app)
+            .get('/')
+            .end((err, res) => {
+                if(err) console.log(err)
+                else {
+                    expect(res.statusCode).to.be.a("number")
+                    expect(res.statusCode).to.equal(200)
+                    expect(res.body).to.be.a("array")
+                    // test the number of messages in the array
+                    // expect(res.body.length).to.equal(#)
+                    // test the content of a test message
+                    // expect(res.body[0]).to.equal('test)
+                }
+            })
         done()
     })
 
