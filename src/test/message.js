@@ -18,17 +18,26 @@ chai.use(chaiHttp)
  * root level hooks
  */
 after((done) => {
-  // required because https://github.com/Automattic/mongoose/issues/1251#issuecomment-65793092
-  mongoose.models = {}
-  mongoose.modelSchemas = {}
-  mongoose.connection.close()
-  done()
+    // required because https://github.com/Automattic/mongoose/issues/1251#issuecomment-65793092
+    mongoose.models = {}
+    mongoose.modelSchemas = {}
+    mongoose.connection.close()
+    done()
 })
 
 
 describe('Message API endpoints', () => {
     beforeEach((done) => {
         // TODO: add any beforeEach code here
+        // const sampleUser = new User({
+        //     username: 'myuser',
+        //     password: 'mypassword',
+        //     id: SAMPLE_OBJECT_ID,
+        // })
+        // sampleUser.save()
+        // .then(() => {
+
+        // })
         done()
     })
 
